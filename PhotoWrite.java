@@ -21,6 +21,7 @@ class PhotoWrite {
               String url = "jdbc:oracle:thin:@localhost:49161:XE";
               String userid = "DA106";
               String hello = "123456";
+              float qwert = 123;
               //String picName = "back1.gif";
 	        
               try {
