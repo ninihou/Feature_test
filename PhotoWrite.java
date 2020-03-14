@@ -1,6 +1,10 @@
 import java.sql.*;
 import java.io.*;
 //ji ji j ij ij ij iji j
+
+public class god(){
+
+}
 class PhotoWrite {
   
         static {
@@ -16,7 +20,7 @@ class PhotoWrite {
               PreparedStatement pstmt = null;
               String url = "jdbc:oracle:thin:@localhost:49161:XE";
               String userid = "DA106";
-              String passwd = "123456";
+              String hello = "123456";
               //String picName = "back1.gif";
 	        
               try {
