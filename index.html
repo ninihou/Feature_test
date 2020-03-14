@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/frontEnd.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+         #canvas1{
+  width:300px;
+  height:200px;
+  border: 10px solid lightgray;
+}
+
+#upload-preview{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--這個是上方選單,你用不到-->
+        <div id="top-logo" class="logo"><a href="frontEnd.html" title="回首頁"><img class="logo-photo"
+                    src="image/Handdrawn Circle Logo.png" alt="logo"></a></div>
+        <div class="function">
+            <div class="function-list">
+                <div class="member-center">
+                    <a href="#"><span class="member-center-spann">會員中心</span></a>
+                </div>
+            </div>
+            <div class="function-list">
+                <div class="shop-car">
+                    <a href="#"><img class="header-icon" src="image/shopping-cart-icon.png" alt="shopping-cart">
+                        <div class="herder-icon-span"><span class="shop-car-span">購物車</span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="login">
+                <div class="function-list">
+                    <a href="#"><img class="header-icon" src="image/user-icon.png" alt="login-icon">
+                        <div class="herder-icon-span"><span class="login-span">登入</span></div>
+                    </a>
+                </div>
+            </div>
+        </div><!-- end of function-->
+        <nav role="navigation">
+            <ul class="access-menu">
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/recipe-icon.png"><span
+                            class="access-menu-span">食譜專區</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <span class="access-submenu-1">
+                        <ul class="access-submenu">
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                        </ul>
+                    </span>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon"
+                            src="image/livestream-icon.png"><span class="access-menu-span">直播專區</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/shop-icon.png"><span
+                            class="access-menu-span">食材商城</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/course-icon.png"><span
+                            class="access-menu-span">料理課程</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <!-- Link5 暫時保留 -->
+                <!-- <li>
+                    <a href="#" style="display:none">link 5</a>
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </nav>
+    </header><!-- end of header-->
+    <!--上方選單尾巴-->
+    <!-- 這個是登箱製作,你不要動! -->
+    <div class="login-wrap">
+        <div class="login-html">
+            <img class="login-close" src="image/close.png" alt="close">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+                In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group SignIn">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot" class="foot-lnk-a">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end of login-->
+    <!--登箱結束-->
+    <!--一鍵置頂-->
+    <div class="pagetop">
+        <a href="#top-logo"><img src="image/go-top-page.png" alt="go-top-page"></a>
+    </div><!-- end of pagetop-->
+    <!--*************************************以下開放編輯▼**************************************-->
+    <!-- 主要內容從這裡開始!!!請自行編輯調整,請勿更動載入的CSS檔案自行生成 -->
+    <!-- 主要內容從這裡開始!!!請自行編輯調整,請勿更動載入的CSS檔案自行生成 -->
+    <!-- 主要內容從這裡開始!!!請自行編輯調整,請勿更動載入的CSS檔案自行生成 -->
+    <!-- 不要動外部的frontEndcss檔案!-->
+    <!-- 不要動外部的frontEndcss檔案!-->
+    <!-- 不要動外部的frontEndcss檔案!-->
+    <main>
+        <article>
+            <!-- 以下開始你的各種標籤 -->
+            <button id="newlsbtn" type="submit"> <img src="live_tv-24px.svg" width="28"> 新增直播預告</button> <br>
+            <h6>上傳預告圖片</h6>
+        
+            <div>
+                <form action="InsertCustomerToDBv3" enctype="multipart/form-data" method="POST" border="1" align="left" cellsdivacing="0" id="tableLogin" >
+                    <div id="canvas1">
+                        <img id="upload-preview">
+                    </div>
+                    <div id="id1">
+                    選擇圖片:
+                    <input name="lspic" type="file" accept="image/*" id="finput" onchange="upload()">
+                    <img id="blah" src="" alt="" />
+                    </div> <br>
+                        <tr><td>直播時間</td><td>
+                            <select id="ddl_year">
+                                <option name="lsyear" value="-1">年</option>
+                            </select>
+                            <select id="ddl_month">
+                                <option name="lsmonth" value="-1">月</option>
+                            </select>
+                            <select id="ddl_day">
+                                <option name="lsdate" value="-1">日</option>
+                            </select></td></tr><br><br>
+
+                        <tr><td>直播主題</td><td><input type="text" name="lstheme" id="lstheme"></td></tr><br><br>
+                        <tr><td>直播預告內容</td><br><textarea name="lscontent" id="lscontent" cols="50" rows="10">請輸入</textarea></tr><br><br>
+                        <tr><td colspan="" align="center">
+                                <input type="submit" id="sendBtn" value="送出">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="button" id="cancelBtn" value="清除">
+                    </td></tr>
+                </form>
+            </div> <br>
+           
+                <!-- 點按後，廚師可選擇要修改之直播，選了之後，先前做好的內容會顯示於上方，廚師再進行更改 -->
+                
+                <button type="submit">更新直播預告</button> <br>
+            <div><select name="lsList" id="lsList">
+                    <option value="p001">1</option>
+                    <option value="p001">2</option>
+                </select>
+            </div>
+            
+        </article>
+    </main>
+    <!--主要內容到此結束-->
+    <!--*************************************以上開放編輯▲**************************************-->
+
+    <footer>
+        <!--這個是底部,你用不到-->
+        <div class="footer-copyright">
+            Copyright &copy; DA106-G4 Foodporn All rights reserved.
+        </div>
+
+    </footer>
+
+    <script>
+
+        function upload(){
+    var imgcanvas=document.getElementById("canvas1");
+    var file=document.getElementById("finput");
+    var image= new SimpleImage(file);
+    image.drawTo(imgcanvas);
+    }
+
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#upload-preview').attr('src', e.target.result);
+        }
+    reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#finput").change(function() {
+    readURL(this);
+    });
+
+    //-----------直播時間下拉式選單開始-----------
+    function set_ddl_date(year_start) {
+    var now = new Date();
+
+    //年(year_start~今年)
+    for (var i = now.getFullYear(); i >= year_start; i--) {
+        $('#ddl_year').
+        append($("<option></option>").
+        attr("value", i).
+        text(i));
+    }
+
+    //月
+    for (var i = 1; i <= 12; i++) {
+        $('#ddl_month').
+        append($("<option></option>").
+        attr("value", i).
+        text(i));
+    }
+
+    $('#ddl_year').change(onChang_date);
+    $('#ddl_month').change(onChang_date);
+
+    //年、月選單改變時
+    function onChang_date() {
+        if ($('#ddl_year').val() != -1 && $('#ddl_month').val() != -1) {
+
+            var date_temp = new Date($('#ddl_year').val(), $('#ddl_month').val(), 0);
+
+            //移除超過此月份的天數
+            $("#ddl_day option").each(function () {
+                if ($(this).val() != -1 && $(this).val() > date_temp.getDate()) $(this).remove();
+            });
+
+            //加入此月份的天數
+            for (var i = 1; i <= date_temp.getDate(); i++) {
+                if (!$("#ddl_day option[value='" + i + "']").length) {
+                    $('#ddl_day').
+                    append($("<option></option>").
+                    attr("value", i).
+                    text(i));
+                }
+            }
+        } else {
+            $("#ddl_day option:selected").removeAttr("selected");
+        }
+    }
+}
+//1911為開始年份
+set_ddl_date(2020);
+//----------直播時間下拉式選單結束----------
+
+    </script>
+</body>
+
+</html>

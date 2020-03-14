@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/frontEnd.css">
+    <link rel="stylesheet" href="css/header-sider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        /*---------------------------------article-container-------------------------------------------*/
+        .article-container {
+            text-align: center;
+            /* border: 5px solid black; */
+            margin-top: 200px;
+        }
+
+        .article-container h2 {
+            font-size: 36px;
+            letter-spacing: 10px;
+            font-weight: 400;
+        }
+
+        .article-section-description {
+            /* border: 5px solid black; */
+            width: 1100px;
+            margin: 10px auto;
+            height: 600px;
+
+        }
+
+        /*-----------------------------廚房專區----------------------------*/
+        .ariticle-section-racipe-h2 {
+            position: relative;
+            top: -90px;
+        }
+
+        .ariticle-section-racipe-h2+span {
+            position: relative;
+            top: -85px;
+        }
+
+        #article-container-recipe {
+            height: 600px;
+            background-image: url("image/recipei-bg.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #article-section-description-recipe {
+            height: 400px;
+        }
+
+        .article-section-description-recipe-left {
+            width: 50%;
+            height: 100%;
+            float: left;
+            padding-top: 90px;
+        }
+
+        .article-section-description-recipe-left span {
+            color: white;
+            font-size: 28px;
+            position: relative;
+            top: 15px;
+        }
+
+        .article-section-description-recipe-left img {
+            float: left;
+            margin-top: 30px 5px;
+        }
+
+        .article-section-description-recipe-right {
+            float: right;
+            width: 50%;
+            height: 50%;
+            padding: 10px 20px;
+        }
+
+        .article-section-description-recipe-right span {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: white;
+        }
+
+        #article-section-seemore-recipe {
+            position: relative;
+            left: -270px;
+            bottom: 170px;
+            clear: both;
+        }
+
+        /*---------------------------直播專區------------------------------------*/
+
+        /*---------------------------食材商城------------------------------------*/
+
+        /*---------------------------課程專區------------------------------------*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="top-logo" class="logo"><a href="frontEnd.html" title="回首頁"><img class="logo-photo"
+                    src="image/Handdrawn Circle Logo.png" alt="logo"></a></div>
+        <div class="function">
+            <div class="function-list">
+                <div class="member-center">
+                    <a href="#"><span class="member-center-spann">會員中心</span></a>
+                </div>
+            </div>
+            <div class="function-list">
+                <div class="shop-car">
+                    <a href="#"><img class="header-icon" src="image/shopping-cart-icon.png" alt="shopping-cart">
+                        <div class="herder-icon-span"><span class="shop-car-span">購物車</span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="login">
+                <div class="function-list">
+                    <a href="#"><img class="header-icon" src="image/user-icon.png" alt="login-icon">
+                        <div class="herder-icon-span"><span class="login-span">登入</span></div>
+                    </a>
+                </div>
+            </div>
+        </div><!-- end of function-->
+        <nav role="navigation">
+            <ul class="access-menu">
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/recipe-icon.png"><span
+                            class="access-menu-span">食譜專區</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <span class="access-submenu-1">
+                        <ul class="access-submenu">
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                            <li><a href="#">sub link 1</a></li>
+                        </ul>
+                    </span>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon"
+                            src="image/livestream-icon.png"><span class="access-menu-span">直播專區</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                        <li><a href="#">sub link 2</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/shop-icon.png"><span
+                            class="access-menu-span">食材商城</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                        <li><a href="#">sub link 3</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <li>
+                    <a href="#" class="access-menu-a"><img class="access-menu-icon" src="image/course-icon.png"><span
+                            class="access-menu-span">料理課程</span></a>
+                    <!-- <div class="access-menu-subinner"> -->
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                        <li><a href="#">sub link 4</a></li>
+                    </ul>
+                    </div>
+                </li>
+                </div>
+                <!-- Link5 暫時保留 -->
+                <!-- <li>
+                    <a href="#" style="display:none">link 5</a>
+                    <ul class="access-submenu">
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                        <li><a href="#">sub link 5</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </nav>
+    </header><!-- end of header-->
+    <!-- 登箱開始 -->
+    <div class="login-wrap">
+        <div class="login-html">
+            <img class="login-close" src="image/close.png" alt="close">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+                In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group SignIn">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot" class="foot-lnk-a">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end of login-->
+    <div class="pagetop">
+        <a href="#top-logo"><img src="image/go-top-page.png" alt="go-top-page"></a>
+        <!--一鍵置頂-->
+
+    </div><!-- end of pagetop-->
+    <main>
+        <article>
+            <!--廣告橫幅區-->
+            <section id="ad">
+                <div class="slider">
+                    <div class="slide_viewer">
+                        <div class="slide_group">
+                            <div class="slide"><a href="#" class="sider-link"><img class="slide-photo"
+                                        src="image/ad/SimpleIsBest.png"></a>
+                            </div>
+                            <div class="slide"><a href="#" class="sider-link"><img class="slide-photo"
+                                        src="image/ad/INameTheSite.png"></a>
+                            </div>
+                            <div class="slide"><a href="#" class="sider-link"><img class="slide-photo"
+                                        src="image/ad/ILoveJiaHong.png"></a>
+                            </div>
+                            <div class="slide"><a href="#" class="sider-link"><img class="slide-photo"
+                                        src="image/ad/TheVagetable.png"></a>
+                            </div>
+                            <div class="slide"><a href="#" class="sider-link"><img class="slide-photo"
+                                        src="image/ad/EnjoyYourLivestream.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End // .slider -->
+                <div class="slide_buttons">
+                </div>
+            </section><!-- end of ad -->
+
+            <section id="recipe">
+                <!--食譜專區-->
+                <div class="article-container" id="article-container-recipe">
+                    <h2 class="ariticle-section-racipe-h2">食譜專區</h2><span class="ariticle-section-cption">Recipe</span>
+                    <div class="article-section-description" id="article-section-description-recipe">
+                        <div class="article-section-description-recipe-left">
+                            <img src="image/recipe_hdg-m3_pc.png" alt="三月份">
+                            <span>Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.</span></div>
+                        <div class="article-section-description-recipe-right"><span>本周推薦</span></div>
+                        <div class="article-section-description-recipe-right"><span>熱門食譜</span></div>
+                    </div>
+                    <span class="article-section-seemore" id="article-section-seemore-recipe">更多食譜...</span>
+                </div>
+            </section><!-- end of recipe-->
+
+            <section id="livestream">
+                <!--直播專區-->
+                <div class="article-container">
+                    <h2 class="article-section-tiltle">直播專區</h2><span class="ariticle-section-cption">Livestream</span>
+                    <div class="article-section-description"></div>
+                    <span class="article-section-seemore">更多線上直播...</span>
+                </div>
+            </section><!-- end of livestream-->
+
+            <section id="shop">
+                <!--食材商城-->
+                <div class="article-container">
+                    <h2>食材商城</h2><span class="ariticle-section-cption">Ingredient store</span>
+                    <div class="article-section-description"></div>
+                    <span class="article-section-seemore">更多食材...</span>
+                </div>
+            </section><!-- end of shop-->
+
+            <section id="course">
+                <!--課程專區-->
+                <div class="article-container">
+                    <h2>課程專區</h2><span class="ariticle-section-cption">Cooking Course</span>
+                    <div class="article-section-description"></div>
+                    <span class="article-section-seemore">更多料理課程...</span>
+                </div>
+            </section><!-- end of course-->
+
+        </article><!-- end of article-->
+    </main><!-- end of main -->
+    <footer>
+        <div class="footer-copyright">
+            Copyright &copy; DA106-G4 Foodporn All rights reserved.
+        </div>
+
+    </footer>
+    <!-- JavasScript-->
+    <!-- JavasScript-->
+    <!-- JavasScript for Sider -->
+    <script src="javascript/header_sider.js" type="text/javascript" charset="utf-8"></script>
+    <!-- JavasScript for LogForm -->
+    <script src="javascript/loginForm.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

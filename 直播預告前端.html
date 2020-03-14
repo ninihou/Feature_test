@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播前端</title>
+<style>
+    canvas{
+  width:250px;
+  height:150px;
+  border: 10px solid lightgray;
+}
+</style>
+</head>
+<body>
+    <div>
+      現在位置 : <span id="curPos"> 首頁 >> <i>直播</i></span>
+    </div><br>
+    
+    
+    <button id="newlsbtn" type="submit"> <img src="live_tv-24px.svg" width="28"> 新增直播預告</button> <br>
+    <h6>上傳預告圖片</h6>
+
+    <div><form action="PhotoWrite.java" method="POST" border="1" align="left" cellsdivacing="0" id="tableLogin">
+    <canvas id="canvas1"></canvas><br>
+    <p id="id1">
+        選擇圖片:
+        <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()">
+    </p> <br>
+            <tr><td>直播主題</td><td><input type="text" name="lstheme" id="lstheme"></td></tr><br><br>
+            <tr><td>直播預告內容</td><br><textarea name="lscontent" id="lscontent" cols="50" rows="10">請輸入</textarea></tr><br><br>
+            <tr><td colspan="" align="center">
+                    <input type="button" id="sendBtn" value="送出">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="cancelBtn" value="清除">
+                </td></tr>
+            </form>
+        </div> <br>
+   
+        <!-- 點按後，廚師可選擇要修改之直播，選了之後，先前做好的內容會顯示於上方，廚師再進行更改 -->
+        
+        <button type="submit">更新直播預告</button> <br>
+    <div><select name="lsList" id="lsList">
+            <option value="p001">1</option>
+            <option value="p001">2</option>
+        </select>
+    </div>
+    <script type="text/javascript">
+        document.bgColor = "white";
+        document.fgColor = "blue";
+        document.write("Last modified: ", document.lastModified, "<br>");
+    //-------------------------- 取得網頁上id為curPos元素的參考	
+        // var curPos = document.getElementById("curPos");
+        // console.log(curPos.innerText);
+        // console.log(curPos.innerHTML);
+    //-------------------------- 改變curPos元素的內容
+    //curPos.innerText = "首頁 >> <i>會員專區</i>";
+    //curPos.innerHTML = "首頁 >> <i>直播預告專區</i>";
+    
+    //-------------------------- 改變curPos元素的外觀(前景色改為deeppink)
+    //curPos.style.color = "deeppink";
+    //curPos.style.fontSize = "20px";
+    //curPos.style.borderBottomStyle = "dotted";
+    
+    //-------------------------- 取得網頁上name為sData元素的參考
+    //var sDatas = document.getElementsByName("sData");
+    // sDatas[0].value = "Guest";
+    // sDatas[0].style.borderRadius = "6px";
+    // sDatas[1].value = "Guest1";
+    
+    //---------插播
+    //var panel = document.getElementsByTagName("div")[0];
+    //panel.style.display = "none";
+    //panel.style.visibility = "visible";
+
+    //上傳圖片
+    function upload(){
+    var imgcanvas=document.getElementById("canvas1");
+    var file=document.getElementById("finput");
+    var image= new SimpleImage(file);
+    image.drawTo(imgcanvas);
+    }
+    
+    </script>
+    
+
+</body>
+</html>
