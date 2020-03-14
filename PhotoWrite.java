@@ -1,6 +1,6 @@
 import java.sql.*;
 import java.io.*;
-
+//ji ji j ij ij ij iji j
 class PhotoWrite {
   
         static {
